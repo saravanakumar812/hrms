@@ -1,0 +1,812 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:project2/Utilis.dart';
+import 'package:project2/page1/PaySlip.dart';
+
+class PaySlip extends StatelessWidget {
+  const PaySlip({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Attendance",
+            style: SafeGoogleFont(
+              "Poppins",
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+            )),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back_ios_new)),
+      ),
+      body: Container(
+        width: double.infinity,
+        //height: double.infinity,
+        decoration: BoxDecoration(color: Colors.white),
+
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 30, left: 20),
+              child: Container(
+                //padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  "Employee details",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            Container(
+              child: Row(children: [
+                Container(
+                  margin: EdgeInsets.only(left: 20, top: 20, right: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            "Employee Id",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.grey[500],
+                                fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        width: 215,
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            "A1200",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ]),
+            ),
+            Container(
+              child: Row(children: [
+                Container(
+                  margin: EdgeInsets.only(left: 20, top: 10, right: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            "Employee Name",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.grey[500],
+                                fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        width: 175,
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            "Balaji D",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ]),
+            ),
+            Container(
+              child: Row(children: [
+                Container(
+                  margin: EdgeInsets.only(left: 20, top: 10, right: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            "Employee Id",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.grey[500],
+                                fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        width: 207,
+                      ),
+                      Column(
+                        children: [
+                          Text("Admin",
+                              style: SafeGoogleFont(
+                                "Poppins",
+                                //fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                              ))
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ]),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 20, left: 20),
+              child: Text("Pay-Slip details",
+                  style: SafeGoogleFont(
+                    "Poppins",
+                    fontSize: 20,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.w500,
+                  )),
+            ),
+            Container(
+              child: Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 20, left: 20),
+                    height: 40,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 2, color: Colors.blue),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 13,
+                        ),
+                        Container(
+                          width: 150,
+                          child: Text(
+                            "Emp.ID",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.grey[500],
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 20, left: 20),
+                    child: Container(
+                      height: 40,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 2, color: Colors.blue),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 13,
+                          ),
+                          Container(
+                            width: 100,
+                            child: Text(
+                              "June,2023",
+                              style: GoogleFonts.poppins(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 40),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text(
+                            "ID",
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 40),
+                          child: Text(
+                            "Emp.ID",
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 30),
+                          child: Text(
+                            "Name",
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 30),
+                          child: Text(
+                            "Period",
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 30),
+                          child: Text(
+                            "Gross pay",
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 30),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text(
+                            "1210",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PaySlipInfo()));
+                          },
+                          child: Container(
+                            padding: EdgeInsets.only(left: 25),
+                            child: Text(
+                              "83724",
+                              style: GoogleFonts.poppins(
+                                  // fontSize: 20,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 37),
+                          child: Text(
+                            "Naveen",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 14),
+                          child: Text(
+                            "9.00Am",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text(
+                            "1000USD",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 15),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text(
+                            "1211",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 28),
+                          child: Text(
+                            "56218",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 40),
+                          child: Text(
+                            "Donaid",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 18),
+                          child: Text(
+                            "9.00Am",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 23),
+                          child: Text(
+                            "1000USD",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 15),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text(
+                            "1212",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 24),
+                          child: Text(
+                            "94107",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 41),
+                          child: Text(
+                            "Danny",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 22),
+                          child: Text(
+                            "9.00Am",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 23),
+                          child: Text(
+                            "1000USD",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 15),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text(
+                            "1213",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 23),
+                          child: Text(
+                            "30985",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 36),
+                          child: Text(
+                            "Siva",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 36),
+                          child: Text(
+                            "9.00Am",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Text(
+                            "1000USD",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 15),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text(
+                            "1214",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 23),
+                          child: Text(
+                            "72649",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 38),
+                          child: Text(
+                            "Mithun",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 18),
+                          child: Text(
+                            "9.00Am",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Text(
+                            "1000USD",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 15),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text(
+                            "1216",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 24),
+                          child: Text(
+                            "18450",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 39),
+                          child: Text(
+                            "Murali",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 23),
+                          child: Text(
+                            "9.00Am",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Text(
+                            "1000USD",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 15),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text(
+                            "1216",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 22),
+                          child: Text(
+                            "62392",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 38),
+                          child: Text(
+                            "Sathaya",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 8),
+                          child: Text(
+                            "9.00Am",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Text(
+                            "1000USD",
+                            style: GoogleFonts.poppins(
+                                // fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 60),
+              child: Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 20),
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: Image.asset("images/arrowback.png")),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 70),
+                    child: Container(
+                      height: 20,
+                      width: 20,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.blue),
+                      child: Center(
+                        child: Text(
+                          "1",
+                          style: GoogleFonts.poppins(
+                              // fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "2",
+                          style: GoogleFonts.poppins(
+                              // fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "3",
+                          style: GoogleFonts.poppins(
+                              // fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "4",
+                          style: GoogleFonts.poppins(
+                              // fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "5",
+                          style: GoogleFonts.poppins(
+                              // fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "6",
+                          style: GoogleFonts.poppins(
+                              // fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 70),
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: Image.asset(
+                          "images/circle-right-icon.png",
+                          color: Colors.blue,
+                        )),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
