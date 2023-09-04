@@ -59,7 +59,7 @@ class _LoginMobilePageState extends State<LoginMobilePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                height: 50,
+                height: 80,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
